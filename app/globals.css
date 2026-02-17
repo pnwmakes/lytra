@@ -1,0 +1,140 @@
+@import "tailwindcss";
+
+body {
+  @apply antialiased bg-white text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100;
+}
+
+.hero-texture {
+  background-image:
+    radial-gradient(circle at 50% 0%, rgba(255, 252, 220, 0.9), rgba(255, 252, 220, 0) 42%),
+    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0) 32%),
+    repeating-linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0.08) 0px,
+      rgba(255, 255, 255, 0.08) 2px,
+      rgba(0, 0, 0, 0.02) 2px,
+      rgba(0, 0, 0, 0.02) 6px
+    ),
+    linear-gradient(180deg, #e9edf2 0%, #dce4ec 100%);
+}
+
+.dark .hero-texture {
+  background-image:
+    radial-gradient(circle at 50% -10%, rgba(255, 228, 148, 0.22), rgba(255, 228, 148, 0) 45%),
+    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0) 38%),
+    repeating-linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0.03) 0px,
+      rgba(255, 255, 255, 0.03) 2px,
+      rgba(0, 0, 0, 0.16) 2px,
+      rgba(0, 0, 0, 0.16) 6px
+    ),
+    linear-gradient(180deg, #1b2028 0%, #131820 100%);
+}
+
+.hero-sunlight {
+  position: absolute;
+  inset: -10% 0 auto;
+  height: 65%;
+  background: radial-gradient(circle at 50% 0%, rgba(255, 245, 193, 0.9), rgba(255, 245, 193, 0) 65%);
+  pointer-events: none;
+  animation: sunlightPulse 7.5s ease-in-out infinite;
+}
+
+.dark .hero-sunlight {
+  background: radial-gradient(circle at 50% 0%, rgba(255, 211, 102, 0.28), rgba(255, 211, 102, 0) 65%);
+}
+
+.logo-fade-in {
+  animation: logoFadeIn 1.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.title-fade-in {
+  animation: titleFadeIn 1.55s cubic-bezier(0.22, 1, 0.36, 1) 280ms both;
+}
+
+.subtitle-fade-in {
+  animation: subtitleFadeIn 1.25s cubic-bezier(0.22, 1, 0.36, 1) 560ms both;
+  opacity: 0;
+}
+
+.motion-bounce-soft {
+  display: inline-block;
+  animation: bounceSoft 1.4s ease-in-out infinite;
+}
+
+@keyframes titleFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.975);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(-2px) scale(1.006);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes logoFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(14px) scale(0.95) rotate(-0.2deg);
+    filter: blur(3px);
+  }
+  65% {
+    opacity: 1;
+    transform: translateY(-1px) scale(1.01) rotate(0deg);
+    filter: blur(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes subtitleFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceSoft {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(4px);
+  }
+}
+
+@keyframes sunlightPulse {
+  0%,
+  100% {
+    opacity: 0.82;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.03);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-fade-in,
+  .title-fade-in,
+  .subtitle-fade-in,
+  .hero-sunlight,
+  .motion-bounce-soft {
+    animation: none;
+  }
+}
