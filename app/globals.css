@@ -1,171 +1,236 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
-  --lytra-navy: #0d3a5a;
-  --lytra-gold: #c79a34;
-  --lytra-brown: #8a5a32;
-  --lytra-cream: #e8e0c5;
-  --lytra-aqua: #9fcbcc;
-  --lytra-ink: #17212b;
+    --lytra-navy: #1d2a44;
+    --lytra-slate-mid: #4b5a72;
+    --lytra-slate-soft: #dce2eb;
+    --lytra-ember: #f05c2b;
+    --lytra-ember-deep: #c84b1a;
+    --lytra-ember-light: #f28c57;
+    --lytra-ember-tint: #fce8df;
+    --lytra-gold: #d4af37;
+    --lytra-ink: #1f2a37;
 }
 
 body {
-  @apply antialiased;
-  color: var(--lytra-ink);
+    @apply antialiased;
+    color: var(--lytra-ink);
+    background-color: #e9eef5;
 }
 
 .hero-texture {
-  background-image:
-    radial-gradient(circle at 50% 0%, rgba(247, 229, 160, 0.9), rgba(247, 229, 160, 0) 42%),
-    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0) 32%),
-    repeating-linear-gradient(
-      120deg,
-      rgba(255, 255, 255, 0.1) 0px,
-      rgba(255, 255, 255, 0.1) 2px,
-      rgba(13, 58, 90, 0.03) 2px,
-      rgba(13, 58, 90, 0.03) 6px
-    ),
-    linear-gradient(180deg, #edf2f4 0%, #d9e3ea 100%);
+    background-image:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(240, 92, 43, 0.28),
+            rgba(240, 92, 43, 0) 42%
+        ),
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(255, 255, 255, 0.82),
+            rgba(255, 255, 255, 0) 32%
+        ),
+        repeating-linear-gradient(
+            120deg,
+            rgba(255, 255, 255, 0.11) 0px,
+            rgba(255, 255, 255, 0.11) 2px,
+            rgba(29, 42, 68, 0.03) 2px,
+            rgba(29, 42, 68, 0.03) 6px
+        ),
+        linear-gradient(180deg, #f2f5fa 0%, #d0d9e7 100%);
+}
+
+.ly-home-bg {
+    background: linear-gradient(180deg, #d8dee8 0%, #ecf0f7 100%);
+}
+
+.ly-home-hero {
+    background-image:
+        linear-gradient(
+            180deg,
+            rgba(181, 128, 29, 0.58),
+            rgba(181, 128, 29, 0.58)
+        ),
+        radial-gradient(
+            circle at 50% 10%,
+            rgba(255, 255, 255, 0.22),
+            rgba(255, 255, 255, 0) 45%
+        ),
+        linear-gradient(160deg, #53412a 0%, #a37835 50%, #6f522a 100%);
+    background-size: cover;
+    background-position: center;
+}
+
+.ly-home-cta {
+    background-image:
+        linear-gradient(180deg, rgba(15, 40, 67, 0.92), rgba(15, 40, 67, 0.92)),
+        radial-gradient(
+            circle at 50% 10%,
+            rgba(255, 255, 255, 0.14),
+            rgba(255, 255, 255, 0) 55%
+        );
 }
 
 .hero-sunlight {
-  position: absolute;
-  inset: -10% 0 auto;
-  height: 65%;
-  background: radial-gradient(circle at 50% 0%, rgba(255, 245, 193, 0.9), rgba(255, 245, 193, 0) 65%);
-  pointer-events: none;
-  animation: sunlightPulse 7.5s ease-in-out infinite;
+    position: absolute;
+    inset: -10% 0 auto;
+    height: 65%;
+    background: radial-gradient(
+        circle at 50% 0%,
+        rgba(240, 92, 43, 0.22),
+        rgba(240, 92, 43, 0) 65%
+    );
+    pointer-events: none;
+    animation: sunlightPulse 7.5s ease-in-out infinite;
 }
 
 .logo-fade-in {
-  animation: logoFadeIn 1.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation: logoFadeIn 1.35s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .title-fade-in {
-  animation: titleFadeIn 1.55s cubic-bezier(0.22, 1, 0.36, 1) 280ms both;
+    animation: titleFadeIn 1.55s cubic-bezier(0.22, 1, 0.36, 1) 280ms both;
 }
 
 .subtitle-fade-in {
-  animation: subtitleFadeIn 1.25s cubic-bezier(0.22, 1, 0.36, 1) 560ms both;
-  opacity: 0;
-  color: #2e3c49;
+    animation: subtitleFadeIn 1.25s cubic-bezier(0.22, 1, 0.36, 1) 560ms both;
+    opacity: 0;
+    color: #2b3a4f;
 }
 
 .motion-bounce-soft {
-  display: inline-block;
-  animation: bounceSoft 1.4s ease-in-out infinite;
+    display: inline-block;
+    animation: bounceSoft 1.4s ease-in-out infinite;
 }
 
 .brand-card {
-  background: rgba(255, 255, 255, 0.92);
-  border: 1px solid rgba(13, 58, 90, 0.2);
-  box-shadow: 0 10px 30px rgba(13, 58, 90, 0.14);
+    background: rgba(248, 251, 255, 0.94);
+    border: 1px solid rgba(29, 42, 68, 0.32);
+    box-shadow: 0 14px 34px rgba(29, 42, 68, 0.2);
 }
 
 .brand-heading {
-  color: var(--lytra-navy);
+    color: var(--lytra-navy);
 }
 
 .brand-prose {
-  color: #293847;
+    color: #334155;
 }
 
 .brand-accent {
-  color: var(--lytra-gold);
+    color: var(--lytra-ember);
 }
 
 .brand-btn-primary {
-  background: var(--lytra-gold);
-  color: #1f2328;
-  border: 1px solid #ac8124;
+    background: var(--lytra-ember);
+    color: #ffffff;
+    border: 1px solid var(--lytra-ember-deep);
+    box-shadow: 0 6px 16px rgba(200, 75, 26, 0.25);
 }
 
 .brand-btn-primary:hover {
-  background: #b78c2d;
+    background: var(--lytra-ember-deep);
 }
 
 .brand-btn-secondary {
-  background: rgba(255, 255, 255, 0.8);
-  color: var(--lytra-navy);
-  border: 1px solid rgba(13, 58, 90, 0.35);
+    background: var(--lytra-navy);
+    color: #ffffff;
+    border: 1px solid rgba(29, 42, 68, 0.7);
 }
 
 .brand-btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.95);
+    background: #162036;
+}
+
+.brand-section {
+    margin-top: 2rem;
+    border-radius: 0.9rem;
+    border: 1px solid rgba(29, 42, 68, 0.2);
+    border-left: 4px solid var(--lytra-ember);
+    background: rgba(255, 255, 255, 0.76);
+    padding: 1.15rem 1.1rem;
+}
+
+.brand-divider {
+    margin-top: 0.8rem;
+    height: 4px;
+    width: 120px;
+    border-radius: 9999px;
+    background: linear-gradient(90deg, var(--lytra-ember), var(--lytra-gold));
 }
 
 @keyframes titleFadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px) scale(0.975);
-  }
-  70% {
-    opacity: 1;
-    transform: translateY(-2px) scale(1.006);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
+    0% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.975);
+    }
+    70% {
+        opacity: 1;
+        transform: translateY(-2px) scale(1.006);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }
 
 @keyframes logoFadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(14px) scale(0.95) rotate(-0.2deg);
-    filter: blur(3px);
-  }
-  65% {
-    opacity: 1;
-    transform: translateY(-1px) scale(1.01) rotate(0deg);
-    filter: blur(0);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-    filter: blur(0);
-  }
+    0% {
+        opacity: 0;
+        transform: translateY(14px) scale(0.95) rotate(-0.2deg);
+        filter: blur(3px);
+    }
+    65% {
+        opacity: 1;
+        transform: translateY(-1px) scale(1.01) rotate(0deg);
+        filter: blur(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
 }
 
 @keyframes subtitleFadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    0% {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes bounceSoft {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(4px);
-  }
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(4px);
+    }
 }
 
 @keyframes sunlightPulse {
-  0%,
-  100% {
-    opacity: 0.82;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.03);
-  }
+    0%,
+    100% {
+        opacity: 0.82;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.03);
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .logo-fade-in,
-  .title-fade-in,
-  .subtitle-fade-in,
-  .hero-sunlight,
-  .motion-bounce-soft {
-    animation: none;
-  }
+    .logo-fade-in,
+    .title-fade-in,
+    .subtitle-fade-in,
+    .hero-sunlight,
+    .motion-bounce-soft {
+        animation: none;
+    }
 }
