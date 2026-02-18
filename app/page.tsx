@@ -49,12 +49,11 @@ export default function Home() {
                 </header>
 
                 <section className='ly-home-hero relative px-5 py-14 text-center sm:px-10'>
-                    <div className='absolute inset-0 bg-[#1a2433]/35' />
                     <div className='relative z-10 mx-auto flex max-w-2xl flex-col items-center'>
                         <img
                             src='/logo.png'
                             alt='Lytra logo'
-                            className='logo-fade-in h-28 w-28 rounded-full bg-white/90 p-2'
+                            className='logo-fade-in h-56 w-56 object-contain'
                         />
                         <h1 className='title-fade-in mt-7 text-4xl font-bold text-white sm:text-5xl'>
                             Lytra Learning
