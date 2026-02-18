@@ -23,7 +23,7 @@ export const metadata: Metadata = {
         description: 'Education that restores. Careers that last.',
         images: [
             {
-                url: '/opengraph-image.png',
+                url: '/opengraph-image',
                 width: 1200,
                 height: 630,
                 alt: 'Lytra Learning - Education that restores. Careers that last.',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'Lytra Learning',
         description: 'Education that restores. Careers that last.',
-        images: ['/twitter-image.png'],
+        images: ['/twitter-image'],
     },
 };
 
