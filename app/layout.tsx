@@ -21,11 +21,20 @@ export const metadata: Metadata = {
     siteName: "Lytra Learning",
     title: "Lytra Learning",
     description: "the payments that buy freedom.",
+    images: [
+      {
+        url: "/logo.png",
+        width: 768,
+        height: 768,
+        alt: "Lytra Learning logo",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Lytra Learning",
     description: "the payments that buy freedom.",
+    images: ["/logo.png"],
   },
 };
 

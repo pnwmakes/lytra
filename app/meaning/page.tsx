@@ -4,7 +4,6 @@ export default function MeaningPage() {
   return (
     <main className="hero-texture min-h-screen px-4 py-8 sm:px-6 lg:px-8">
       <article className="brand-card brand-prose mx-auto w-full max-w-4xl rounded-3xl px-6 py-8 sm:px-10 sm:py-12">
-        <p className="text-sm font-semibold uppercase tracking-wide brand-accent">Option 1</p>
         <h1 className="brand-heading mt-2 text-4xl font-extrabold tracking-tight sm:text-5xl">
           The Weight of a Life
         </h1>

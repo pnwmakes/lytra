@@ -4,7 +4,6 @@ export default function WorkPage() {
   return (
     <main className="hero-texture min-h-screen px-4 py-8 sm:px-6 lg:px-8">
       <article className="brand-card brand-prose mx-auto w-full max-w-4xl rounded-3xl px-6 py-8 sm:px-10 sm:py-12">
-        <p className="text-sm font-semibold uppercase tracking-wide brand-accent">Option 2</p>
         <h1 className="brand-heading mt-2 text-4xl font-extrabold tracking-tight sm:text-5xl">
           More About Our Work
         </h1>
@@ -58,12 +57,10 @@ export default function WorkPage() {
         </section>
 
         <section className="mt-10">
-          <h2 className="brand-heading text-2xl font-bold sm:text-3xl">Tagline Options</h2>
-          <ul className="mt-4 list-disc space-y-3 pl-6 text-base sm:text-lg">
-            <li>Led from the inside. Built for what&apos;s next.</li>
-            <li>Education that restores. Careers that last.</li>
-            <li>The future of work, built by those the system forgot.</li>
-          </ul>
+          <h2 className="brand-heading text-2xl font-bold sm:text-3xl">Tagline</h2>
+          <p className="mt-4 text-base font-semibold sm:text-lg">
+            Education that restores. Careers that last.
+          </p>
         </section>
 
         <div className="mt-10 flex flex-wrap gap-3">
