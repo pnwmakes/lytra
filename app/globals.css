@@ -1,35 +1,31 @@
 @import "tailwindcss";
 
+:root {
+  --lytra-navy: #0d3a5a;
+  --lytra-gold: #c79a34;
+  --lytra-brown: #8a5a32;
+  --lytra-cream: #e8e0c5;
+  --lytra-aqua: #9fcbcc;
+  --lytra-ink: #17212b;
+}
+
 body {
-  @apply antialiased bg-white text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100;
+  @apply antialiased;
+  color: var(--lytra-ink);
 }
 
 .hero-texture {
   background-image:
-    radial-gradient(circle at 50% 0%, rgba(255, 252, 220, 0.9), rgba(255, 252, 220, 0) 42%),
-    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0) 32%),
+    radial-gradient(circle at 50% 0%, rgba(247, 229, 160, 0.9), rgba(247, 229, 160, 0) 42%),
+    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0) 32%),
     repeating-linear-gradient(
       120deg,
-      rgba(255, 255, 255, 0.08) 0px,
-      rgba(255, 255, 255, 0.08) 2px,
-      rgba(0, 0, 0, 0.02) 2px,
-      rgba(0, 0, 0, 0.02) 6px
+      rgba(255, 255, 255, 0.1) 0px,
+      rgba(255, 255, 255, 0.1) 2px,
+      rgba(13, 58, 90, 0.03) 2px,
+      rgba(13, 58, 90, 0.03) 6px
     ),
-    linear-gradient(180deg, #e9edf2 0%, #dce4ec 100%);
-}
-
-.dark .hero-texture {
-  background-image:
-    radial-gradient(circle at 50% -10%, rgba(255, 228, 148, 0.22), rgba(255, 228, 148, 0) 45%),
-    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0) 38%),
-    repeating-linear-gradient(
-      120deg,
-      rgba(255, 255, 255, 0.03) 0px,
-      rgba(255, 255, 255, 0.03) 2px,
-      rgba(0, 0, 0, 0.16) 2px,
-      rgba(0, 0, 0, 0.16) 6px
-    ),
-    linear-gradient(180deg, #1b2028 0%, #131820 100%);
+    linear-gradient(180deg, #edf2f4 0%, #d9e3ea 100%);
 }
 
 .hero-sunlight {
@@ -39,10 +35,6 @@ body {
   background: radial-gradient(circle at 50% 0%, rgba(255, 245, 193, 0.9), rgba(255, 245, 193, 0) 65%);
   pointer-events: none;
   animation: sunlightPulse 7.5s ease-in-out infinite;
-}
-
-.dark .hero-sunlight {
-  background: radial-gradient(circle at 50% 0%, rgba(255, 211, 102, 0.28), rgba(255, 211, 102, 0) 65%);
 }
 
 .logo-fade-in {
@@ -56,11 +48,50 @@ body {
 .subtitle-fade-in {
   animation: subtitleFadeIn 1.25s cubic-bezier(0.22, 1, 0.36, 1) 560ms both;
   opacity: 0;
+  color: #2e3c49;
 }
 
 .motion-bounce-soft {
   display: inline-block;
   animation: bounceSoft 1.4s ease-in-out infinite;
+}
+
+.brand-card {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(13, 58, 90, 0.2);
+  box-shadow: 0 10px 30px rgba(13, 58, 90, 0.14);
+}
+
+.brand-heading {
+  color: var(--lytra-navy);
+}
+
+.brand-prose {
+  color: #293847;
+}
+
+.brand-accent {
+  color: var(--lytra-gold);
+}
+
+.brand-btn-primary {
+  background: var(--lytra-gold);
+  color: #1f2328;
+  border: 1px solid #ac8124;
+}
+
+.brand-btn-primary:hover {
+  background: #b78c2d;
+}
+
+.brand-btn-secondary {
+  background: rgba(255, 255, 255, 0.8);
+  color: var(--lytra-navy);
+  border: 1px solid rgba(13, 58, 90, 0.35);
+}
+
+.brand-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.95);
 }
 
 @keyframes titleFadeIn {
