@@ -5,7 +5,7 @@ import './globals.css';
 export const metadata: Metadata = {
     metadataBase: new URL('https://lytra-learning.netlify.app'),
     title: 'Lytra Learning',
-    description: 'Lytra Learning — the payments that buy freedom.',
+    description: 'Education that restores. Careers that last.',
     applicationName: 'Lytra Learning',
     alternates: {
         canonical: '/',
@@ -20,21 +20,21 @@ export const metadata: Metadata = {
         url: '/',
         siteName: 'Lytra Learning',
         title: 'Lytra Learning',
-        description: 'the payments that buy freedom.',
+        description: 'Education that restores. Careers that last.',
         images: [
             {
-                url: '/logo.png',
-                width: 768,
-                height: 768,
-                alt: 'Lytra Learning logo',
+                url: '/opengraph-image.png',
+                width: 1200,
+                height: 630,
+                alt: 'Lytra Learning - Education that restores. Careers that last.',
             },
         ],
     },
     twitter: {
         card: 'summary_large_image',
         title: 'Lytra Learning',
-        description: 'the payments that buy freedom.',
-        images: ['/logo.png'],
+        description: 'Education that restores. Careers that last.',
+        images: ['/twitter-image.png'],
     },
 };
 

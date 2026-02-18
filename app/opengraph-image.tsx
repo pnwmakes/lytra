@@ -18,20 +18,26 @@ export default function OpenGraphImage() {
                 alignItems: 'center',
                 justifyContent: 'center',
                 background:
-                    'radial-gradient(circle at 50% 0%, #fff0b4 0%, #fff0b400 38%), linear-gradient(180deg, #e8edf3 0%, #d9e2ec 100%)',
-                color: '#111827',
+                    'linear-gradient(180deg, rgba(15,40,67,0.92), rgba(15,40,67,0.92)), radial-gradient(circle at 50% 10%, rgba(255,255,255,0.14), rgba(255,255,255,0) 55%)',
+                color: '#ffffff',
                 fontFamily: 'Arial',
                 letterSpacing: '-0.02em',
             }}
         >
+            <img
+                src='https://lytra-learning.netlify.app/logo-hero.png'
+                alt='Lytra Learning logo'
+                width='220'
+                height='220'
+                style={{
+                    borderRadius: '9999px',
+                    objectFit: 'cover',
+                }}
+            />
             <div
                 style={{
                     display: 'flex',
-                    padding: '24px 36px',
-                    borderRadius: 20,
-                    background: 'rgba(255,255,255,0.94)',
-                    border: '1px solid rgba(17,24,39,0.12)',
-                    boxShadow: '0 12px 30px rgba(17,24,39,0.1)',
+                    marginTop: 28,
                     fontSize: 72,
                     fontWeight: 700,
                 }}
@@ -42,10 +48,10 @@ export default function OpenGraphImage() {
                 style={{
                     marginTop: 26,
                     fontSize: 40,
-                    color: '#374151',
+                    color: '#f2f5fa',
                 }}
             >
-                the payments that buy freedom.
+                Education that restores. Careers that last.
             </div>
         </div>,
         {
