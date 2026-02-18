@@ -6,11 +6,13 @@ export default function Home() {
             <div className='mx-auto w-full max-w-5xl overflow-hidden rounded-b-2xl border border-[#22344f] bg-[#0f2843] shadow-2xl'>
                 <header className='flex items-center justify-between px-4 py-3 sm:px-6'>
                     <div className='flex items-center gap-2'>
-                        <img
-                            src='/logo.png'
-                            alt='Lytra logo'
-                            className='h-9 w-9 rounded-full bg-white/95 p-0.5'
-                        />
+                        <div className='h-11 w-11 overflow-hidden rounded-full'>
+                            <img
+                                src='/logo-hero.png'
+                                alt='Lytra logo'
+                                className='h-full w-full object-cover'
+                            />
+                        </div>
                         <div className='leading-tight text-white'>
                             <p className='text-sm font-bold tracking-wide'>
                                 LYTRA
@@ -50,11 +52,13 @@ export default function Home() {
 
                 <section className='ly-home-hero relative px-5 py-14 text-center sm:px-10'>
                     <div className='relative z-10 mx-auto flex max-w-2xl flex-col items-center'>
-                        <img
-                            src='/logo.png'
-                            alt='Lytra logo'
-                            className='logo-fade-in h-56 w-56 object-contain'
-                        />
+                        <div className='logo-fade-in h-56 w-56 overflow-hidden rounded-full'>
+                            <img
+                                src='/logo-hero.png'
+                                alt='Lytra logo'
+                                className='h-full w-full object-cover'
+                            />
+                        </div>
                         <h1 className='title-fade-in mt-7 text-4xl font-bold text-white sm:text-5xl'>
                             Lytra Learning
                         </h1>
@@ -150,11 +154,13 @@ export default function Home() {
                     <p className='text-3xl font-bold text-white sm:text-4xl'>
                         Education that restores. Careers that last.
                     </p>
-                    <img
-                        src='/logo.png'
-                        alt='Lytra mark'
-                        className='mx-auto mt-6 h-20 w-20 rounded-full bg-white/90 p-1.5'
-                    />
+                    <div className='logo-fade-in mx-auto mt-6 h-56 w-56 overflow-hidden rounded-full'>
+                        <img
+                            src='/logo-hero.png'
+                            alt='Lytra mark'
+                            className='h-full w-full object-cover'
+                        />
+                    </div>
                     <div className='mt-6'>
                         <a
                             href='mailto:site-managers@lytra-learning.org'
